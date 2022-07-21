@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Werpo</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+      
+
+
+
+
+
+        * {
+
+            box-sizing: border-box;
+
+            margin: 0;
+
+            padding: 0;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bold;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background-color: #000000;
+
+            font-family: 'Montserrat', sans-serif;
+              font-weight: 300;  
+
+
+        }
+
+        form,
+
+        .message {
+
+            padding: 40px;
+
+            border-radius: 6px;
+
+            background: #fff;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        h2 {
+
+            margin: 8px 0;
+
+            color: #ff2d2d;
+            font-size: 30px;
+            text-align: center;
+line-height: 1.4;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 300;
+
+        }
+
+
+h4 {
+
+margin: 5px 0;
+
+color: #ff2d20;
+
+text-align: center;
+
+line-height: 1.4;
+size: 5px;
+font-family: 'Montserrat', sans-serif;
+ font-weight: bold;
+
+}
+
+
+
+
+        input {
+
+            display: block;
+
+            padding: 8px 3px;
+
+            outline: none;
+
+            font-size: 12px;
+
+            border-top: 0;
+
+            border-right: 0;
+
+            border-left: 0;
+
+            border-bottom: 2px solid #000000;
+
+            border-radius: 0;
+
+            margin-top: 10px;
+
+            width: 100%;
+
+            color: #888;
+
+        }
+
+        input:first-of-type {
+
+            margin-top: 15px;
+
+        }
+
+        .btn {
+
+            padding: 8px ;
+
+            text-align: center;
+
+            display: block;
+
+            width: 100%;
+
+            cursor: pointer;
+
+            border: none;
+
+            background: #000102;
+
+            color: #fff;
+
+            margin-top: 10px;
+
+            border-radius: 3px;
+
+            text-decoration: none;
+
+        }
+
+        button:hover {
+
+            opacity: 0.9;
+
+        }
+
+        .hide {
+
+            display: none;
+          
+  text-align: center;
+  padding: 32px;
+}
+
+
+
+
+
+        #messageDetails {
+
+            margin-bottom: 20px;
+
+            text-align: center;
+            font-size: 50px;
+
+        }
+
+
+        .header {
+  text-align: center;
+  padding: 32px;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+    </style>
+
+<style>
+
+.row:hover .overlay {
+  opacity: 1;
+}
+    
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+</style>
+
+
+
+
+
+</head>
+
+<body>
+
+    <form action="" id="frmLogin">
+
+        <h2>WERPO AGENCY</h2>
+        <input type="text" name="txtUsername" id="txtUsername" placeholder="Enter your username" required>
+
+        <input type="password" name="txtPassword" id="txtPassword" placeholder="Enter your password" required>
+
+        <button type="submit" class="btn">Login</button>
+
+    </form>
+
+
+
+    <div class="message hide">
+
+        <p id="messageDetails"></p>
+
+<div>
+
+<div class="header">
+
+  
+  <div class="row"> 
+    <div class="column">
+      <img src="https://i.goopics.net/6enmrx.jpg" style="width:100%" >
+      <img src="https://i.goopics.net/vsaqr5.jpg" style="width:100%">
+      <img src="https://i.goopics.net/la2frm.jpg" style="width:100%">
+      <img src="https://i.goopics.net/p6uwaq.jpg" style="width:100%">
+      <img src="https://i.goopics.net/nma85c.jpg" style="width:100%">
+      <img src="https://i.goopics.net/i3k5z9.jpg" style="width:100%">
+      <img src="https://i.goopics.net/t7l9xs.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="https://i.goopics.net/h9tqk8.jpg" style="width:100%">
+      <img src="https://i.goopics.net/y2p45e.jpg" style="width:100%">
+      <img src="https://i.goopics.net/8homvf.jpg" style="width:100%">
+      <img src="https://i.goopics.net/nqfzm7.jpg" style="width:100%">
+      <img src="https://i.goopics.net/lqcb9t.jpg" style="width:100%">
+      <img src="https://i.goopics.net/11ew6k.jpg" style="width:100%">
+    </div>  
+    <div class="column">
+      <img src="https://i.goopics.net/edsflr.jpg" style="width:100%">
+      <img src="https://i.goopics.net/mawyqj.jpg" style="width:100%">
+      <img src="https://i.goopics.net/lq9j6r.jpg" style="width:100%">
+      <img src="https://i.goopics.net/cqpydr.jpg" style="width:100%">
+      <img src="https://i.goopics.net/8pk3y0.jpg" style="width:100%">
+      <img src="https://i.goopics.net/yit9ot.jpg" style="width:100%">
+      <img src="https://i.goopics.net/5k9s92.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="https://i.goopics.net/lqcb9t.jpg" style="width:100%">
+      <img src="https://i.goopics.net/h99cf6.jpg" style="width:100%">
+      <img src="https://i.goopics.net/xljjwb.jpg" style="width:100%">
+      <img src="https://i.goopics.net/vddtue.jpg" style="width:100%">
+      <img src="https://i.goopics.net/ew5t8n.jpg" style="width:100%">
+      <img src="https://i.goopics.net/je0nl7.jpg" style="width:100%">
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+
+        <script>
+
+document.querySelector('form').onsubmit  = (e) => {
+
+    e.preventDefault()
+
+
+
+    let username  = "admin", 
+
+        password  = "admin",
+
+        inputUser = document.querySelector('#txtUsername').value,
+
+        inputPass = document.querySelector('#txtPassword').value
+
+
+
+    if (inputUser != username || inputPass != password) {
+
+        document.querySelector('#message').innerHTML = "Username and Password do not match.<br>Please try again."
+
+    }
+
+    if (inputUser == username && inputPass == password) {
+
+        document.querySelector('#messageDetails').innerHTML = "Welcome";
+
+    }
+
+
+
+    document.querySelector('#frmLogin').classList.add("hide")
+
+    document.querySelector('.message').classList.remove("hide")
+
+}
+
+
+
+</script>
+<script>
+
+document.querySelector('form').onsubmit  = (e) => {
+
+e.preventDefault()
+let username  = "Assistant1", 
+
+    password  = "First2",
+
+    inputUser = document.querySelector('#txtUsername').value,
+
+    inputPass = document.querySelector('#txtPassword').value
+
+
+
+if (inputUser != username || inputPass != password) {
+
+    document.querySelector('#message').innerHTML = "Username and Password do not match.<br>Please try again."
+
+}
+
+if (inputUser == username && inputPass == password) {
+
+    document.querySelector('#messageDetails').innerHTML = "Welcome "
+
+
+
+}
+
+ 
+    
+
+
+
+
+document.querySelector('#frmLogin').classList.add("hide")
+
+document.querySelector('.message').classList.remove("hide")
+
+}
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
